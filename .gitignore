@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+# never commit scenes, renders or logs
+*.dn
+*.png
+*.psd
+*.jpg
+*.jsonl
+*.lock
+!uv.lock
+workspace/

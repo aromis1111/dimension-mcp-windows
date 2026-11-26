@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dimension-mcp-windows"
+version = "0.1.0"
+description = "Unofficial MCP server that lets Claude (or any MCP client) drive Adobe Dimension on Windows"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.2.0,<2",  # FastMCP API; mcp 2.x renamed it to MCPServer
+    "websocket-client>=1.6",
+]
+
+[project.scripts]
+dimension-mcp = "dimension_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dimension_mcp*"]
